@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+    nginx:
+        image: nginx
+        ports:
+            - 80:80
+        links:
+            - app
+        volumes:
+            - /etc/nginx/ssl/trysparkschool_com-ssl-bundle.crt:/etc/nginx/ssl/trysparkschool_com-ssl-bundle.crt
+            - /etc/nginx/ssl/trysparkschool_com.key:/etc/nginx/ssl/trysparkschool_com.key
+
+    redis:
+        image: redis:3.2

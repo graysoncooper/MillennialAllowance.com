@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        {% include facebook_pixel.html %}
+    </head>
+    <body id="course">
+        {% unless page.disable-header %}
+            {% include header.html %}
+        {% endunless %}
+        <main class="container">
+            <article>
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+                {% if page.next-lesson-link %}
+                    <p class="text-center">
+                        <a href="{{ page.next-lesson-link }}" class="next-lesson-button">
+                            CLICK HERE TO GO TO THE NEXT LESSON
+                        </a>
+                    </p>
+                {% endif %}
+                {% unless page.disable-comments %}
+                    {% include disqus.html %}
+                {% endunless %}
+            </article>
+        </main>
+        {% include active_campaign.html %}
+    </body>
+</html>

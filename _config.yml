@@ -1,0 +1,9 @@
+name: Spark School
+highlighter: rouge
+markdown: redcarpet
+exclude:
+ - Makefile
+ - Gemfile
+ - Gemfile.lock
+ - docker-compose.yml
+ - nginx.conf
