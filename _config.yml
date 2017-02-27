@@ -2,6 +2,7 @@ name: Shane Burkhart Consulting
 highlighter: rouge
 markdown: redcarpet
 exclude:
+ - README
  - Makefile
  - Gemfile
  - Gemfile.lock
