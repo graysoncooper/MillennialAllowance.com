@@ -1,9 +1,11 @@
-name: Spark School
+name: Shane Burkhart Consulting
 highlighter: rouge
 markdown: redcarpet
 exclude:
  - Makefile
  - Gemfile
  - Gemfile.lock
- - docker-compose.yml
+ - docker-compose.dev.yml
+ - docker-compose.prod.yml
  - nginx.conf
+ - nginx.dev.conf
