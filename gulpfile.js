@@ -39,7 +39,7 @@ var makeDirectory = function (path) {
   }
 }
 
-gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts', 'sitemap']);
+gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts']);
 
 gulp.task('pug', function (done) {
   deleteFolderRecursive(SITE_OUTPUT_DIR);
@@ -64,6 +64,27 @@ gulp.task('sass', function () {
   gulp.src('./assets/css/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/assets/css'));
+});
+
+gulp.task('misc', function () {
+  gulp.src(['assets/misc/**/*'])
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('fonts', function () {
+  gulp.src(['assets/fonts/**/*'])
+    .pipe(gulp.dest('public/assets/fonts'));
+});
+
+gulp.task('images', function () {
+  gulp.src(['assets/images/**/*'])
+    .pipe(gulp.dest('public/assets/images'));
+});
+
+gulp.task('favicons', function () {
+  gulp.src(['assets/favicons/**/*'])
+    // Favicons are supposed to be accessible from the root.
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('watch', function () {
