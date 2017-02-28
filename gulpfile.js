@@ -18,7 +18,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('pug', function () {
-  gulp.src(['./views/**/*', '!./views/_*/**/*', '!./views/_*'])
+  gulp.src(['./views/**/*.pug', '!./views/_*/**/*'])
     .pipe(print())
     .pipe(pug())
     .pipe(gulp.dest('public'));
