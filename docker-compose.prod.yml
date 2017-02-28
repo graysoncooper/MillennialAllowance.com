@@ -4,6 +4,6 @@ services:
         image: nginx
         ports:
             - 80:80
-
-    redis:
-        image: redis:3.2
+        volumes:
+            - ./nginx.prod.conf:/etc/nginx/nginx.conf
+            - ./public:/public
