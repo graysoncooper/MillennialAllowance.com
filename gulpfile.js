@@ -88,5 +88,5 @@ gulp.task('favicons', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./**/*', ['build']);
+  gulp.watch('**/*', ['build']);
 });

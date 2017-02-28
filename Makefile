@@ -13,4 +13,7 @@ ps:
 	docker-compose -f docker-compose.dev.yml ps
 
 build:
-	jekyll build -w
+	gulp build
+
+watch:
+	gulp watch
