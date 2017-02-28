@@ -28,6 +28,14 @@ make stop
 make logs
 ```
 
+## Deploying
+
+```
+make deploy
+```
+
+
 ## To Create Landing Pages
 
 Create an HTML file in the root of the project.  I recommend copying an existing landing page. You can define the page's URL in the file using the permalink option.
+
