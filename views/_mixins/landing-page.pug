@@ -1,0 +1,198 @@
+mixin purchase_tracking(price, description)
+    if currentCookies.sstrack
+        script.
+            ga('send', 'event', description, 'purchase');
+            fbq('track', 'Purchase', {
+                value: price,
+                currency: 'USD'
+            });
+
+mixin lead_tracking
+    if currentCookies.sstrack
+        script.
+            ga('send', 'event', 'Lead', 'subscribe');
+            fbq('track', 'Lead');
+
+mixin error_notice
+    if currentQuery.error
+        p.error
+            i.fa.fa-warning
+            = currentQuery.error
+    else
+        p.error(style="display: none;")
+
+mixin payment_cc_fields()
+    .input-group.email-group
+        label(for='email') Email
+        input#email(type='text' name='email' placeholder='user@domain.com' value=currentQuery.email)
+    .input-group.cc-group
+        label(for='cc-number') Credit Card
+        input(
+            type='text'
+            id='cc-number'
+            placeholder='4242'
+        )
+    div
+        .input-group.exp-month-group
+            label(for='exp-month') Month
+            select(id='exp-month')
+                option(value='01') 01 - January
+                option(value='02') 02 - February
+                option(value='03') 03 - March
+                option(value='04') 04 - April
+                option(value='05') 05 - May
+                option(value='06') 06 - June
+                option(value='07') 07 - July
+                option(value='08') 08 - August
+                option(value='09') 09 - September
+                option(value='10') 10 - October
+                option(value='11') 11 - November
+                option(value='12') 12 - December
+        .input-group.exp-year-group
+            label(for='exp-year') Year
+            select(id='exp-year')
+                option(value='17') 2017
+                option(value='18') 2018
+                option(value='19') 2019
+                option(value='20') 2020
+                option(value='21') 2021
+                option(value='22') 2022
+                option(value='23') 2023
+        .input-group.cvc-group
+            label(for='cvc') CVC
+            input(type='text' id='cvc' placeholder="123")
+
+mixin payment_form_scripts()
+    script(
+        src='https://code.jquery.com/jquery-2.2.4.min.js'
+        integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='
+        crossorigin='anonymous'
+    )
+    script(type='text/javascript' src='https://js.stripe.com/v2/')
+    script(type='text/javascript').
+        Stripe.setPublishableKey('#{stripePublicKey}');
+
+    script(type='text/javascript').
+      var $form = $('#payment-form');
+      var $submitButton = $form.find('button');
+      var $errorEl = $('p.error');
+      var $iconEl = $('<i class="fa fa-warning"></i>');
+
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+        $submitButton.prop('disabled', true);
+
+        $errorEl.hide();
+
+        var card = {
+            number: $form.find('#cc-number').val(),
+            exp_month: $form.find('#exp-month').val(),
+            exp_year: $form.find('#exp-year').val(),
+            cvc: $form.find('#cvc').val(),
+        };
+
+        Stripe.card.createToken(card, function (status, result) {
+            var token = result.id;
+            var error = result.error;
+
+            if (error) {
+                $errorEl.html('');
+                $errorEl.append($iconEl);
+                $errorEl.append(error.message);
+                $errorEl.show();
+                $submitButton.prop('disabled', false);
+                return;
+            }
+
+            var $stripeTokenEl = $('<input type="hidden" name="stripeToken" />')
+            $stripeTokenEl.val(token);
+
+            $form.append($stripeTokenEl);
+            $form.get(0).submit();
+        });
+
+        // Prevent the form from being submitted
+        return false;
+      });
+
+mixin light_gray_CTA_anchor_section(button_text, button_class)
+    .section.cta.light-gray
+        .container
+            a.button(href='#sign-up' class=button_class)= button_text
+
+mixin white_CTA_anchor_section(button_text, button_class)
+    .section.cta
+        .container
+            a.button(href='#sign-up' class=button_class)= button_text
+
+mixin guide_meet_the_instructor()
+    .section
+        .container
+            .description
+                h2 Meet The Author
+                p Hey, I'm Shane! I’ve been a software developer for a little over 5 years now, and have worked at Yelp, Carfax, and a startup called SumoMe.
+
+                p The crazy part is I didn’t go to college to be a software developer. In fact, I am completely self-taught.
+                p I've spent the last 5 years teaching myself software development and over time, I have learned what works and what doesn't.
+                p
+                    | Now, I want to use my knowledge to help
+                    b &nbsp;get a job as a software developer as quickly as possible.
+
+            .graphic
+                img.circle(src="https://s3.amazonaws.com/spark-school/me_and_yogi.png" alt="Shane Burkhart with his dog, Yogi.")
+
+//-from_now is in seconds
+mixin countdown_timer_code(timer_id, from_now)
+    script.
+        function getTimeRemaining(endtime) {
+          var t = Date.parse(endtime) - Date.parse(new Date());
+          var seconds = Math.floor((t / 1000) % 60);
+          var minutes = Math.floor((t / 1000 / 60) % 60);
+          var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+          var days = Math.floor(t / (1000 * 60 * 60 * 24));
+          return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          };
+        }
+
+        function initializeClock(id, endtime) {
+          var clock = document.getElementById(id);
+          var daysSpan = clock.querySelector('.days');
+          var hoursSpan = clock.querySelector('.hours');
+          var minutesSpan = clock.querySelector('.minutes');
+          var secondsSpan = clock.querySelector('.seconds');
+
+          function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            if (t.days) {
+                daysSpan.innerHTML = t.days;
+                daysSpan.parentElement.style.display = 'inline-block';
+            } else {
+                daysSpan.parentElement.style.display = 'none';
+            }
+
+            if (t.days || t.hours) {
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                hoursSpan.parentElement.style.display = 'inline-block';
+            } else {
+                hoursSpan.parentElement.style.display = 'none';
+            }
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+              clearInterval(timeinterval);
+            }
+          }
+
+          updateClock();
+          var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + #{from_now} * 1000);
+        initializeClock('#{timer_id}', deadline);

@@ -42,22 +42,35 @@ var makeDirectory = function (path) {
 gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts']);
 
 gulp.task('pug', function (done) {
-  deleteFolderRecursive(SITE_OUTPUT_DIR);
-  fs.mkdirSync(SITE_OUTPUT_DIR);
+  try {
+    fs.mkdirSync(SITE_OUTPUT_DIR);
+  } catch (e) {
+      if (e.code !== 'EEXIST') console.log(e);
+  }
 
-  glob('**/*.pug', { ignore: ['node_modules/**/*', '_*/**/*'] }, function (err, matches) {
-    if (err) return done();
-
+  glob(SITE_OUTPUT_DIR + '**/*', function (err, matches) {
     for (var i in matches) {
-      var pugFilename = matches[i];
-      var htmlFilename = SITE_OUTPUT_DIR + pugFilename.replace(/\.pug$/, '.html');
-      var htmlDirectory = htmlFilename.replace(/[^/]+\.html/, '');
-      var html = pug.renderFile(pugFilename);
-
-      makeDirectory(htmlDirectory);
-      fs.writeFileSync(htmlFilename, html, { flag: 'w' });
+      var path = matches[i];
+      var stat = fs.lstatSync(path);
+      if (stat.isDirectory()) deleteFolderRecursive(path);
     }
-  })
+
+    glob('views/**/*.pug', { ignore: ['node_modules/**/*', 'views/_*/**/*'] }, function (err, matches) {
+      if (err) return done();
+
+      for (var i in matches) {
+        var pugFilename = matches[i];
+        var htmlFilename = SITE_OUTPUT_DIR + pugFilename.replace(/^views\//, '').replace(/\.pug$/, '.html');
+        var htmlDirectory = htmlFilename.replace(/[^/]+\.html/, '');
+        var html = pug.renderFile(pugFilename);
+
+        makeDirectory(htmlDirectory);
+        fs.writeFileSync(htmlFilename, html, { flag: 'w' });
+      }
+
+      done();
+    })
+  });
 });
 
 gulp.task('sass', function () {
@@ -88,5 +101,5 @@ gulp.task('favicons', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('**/*', ['build']);
+  gulp.watch(['./views/**/*', './assets/**/*'], ['build']);
 });
