@@ -1578,8 +1578,13 @@ iframe.hidden {
 .container {
   margin: 0px auto;
   width: 700px;
-  white-space: nowrap;
-  overflow: hidden; }
+  white-space: nowrap; }
+  .container:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
   .container > * {
     white-space: normal; }
 
@@ -1647,6 +1652,10 @@ h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, 
 img.circle {
   border-radius: 50%; }
 
+img.outline {
+  border: 3px solid #ffffff;
+  box-shadow: 2px 2px 25px #555555; }
+
 blockquote {
   position: relative;
   padding: 20px 40px 5px 40px;
@@ -1705,7 +1714,7 @@ ul {
 
 .button, button {
   color: #ffffff;
-  background-color: #014f69;
+  background-color: #3fa648;
   display: inline-block;
   margin-bottom: 10px;
   padding: 16px 24px;
@@ -1848,20 +1857,20 @@ ul {
     background-color: #f6f6f6; }
     #landing-page .section.light-gray .bullet-points {
       background-color: #ffffff; }
-  #landing-page .section.dark-blue {
+  #landing-page .section.dark-green {
     color: #e8e8e8;
-    background-color: #014f69; }
-    #landing-page .section.dark-blue .bullet-points {
+    background-color: #3fa648; }
+    #landing-page .section.dark-green .bullet-points {
       background-color: #ffffff; }
-    #landing-page .section.dark-blue .bold, #landing-page .section.dark-blue b {
+    #landing-page .section.dark-green .bold, #landing-page .section.dark-green b {
       color: #ffffff; }
-    #landing-page .section.dark-blue .signup-form .bold, #landing-page .section.dark-blue .signup-form b {
+    #landing-page .section.dark-green .signup-form .bold, #landing-page .section.dark-green .signup-form b {
       color: inherit; }
-    #landing-page .section.dark-blue a {
+    #landing-page .section.dark-green a {
       color: #ffffff;
       font-weight: 700;
       text-decoration: underline; }
-      #landing-page .section.dark-blue a.button {
+      #landing-page .section.dark-green a.button {
         text-decoration: none;
         font-weight: inherit; }
   #landing-page .section.small {
@@ -1876,7 +1885,7 @@ ul {
     margin-bottom: 10px; }
   #landing-page .section p {
     margin-bottom: 15px;
-    font-size: 16px; }
+    font-size: 18px; }
     #landing-page .section p.light {
       font-weight: 300; }
     #landing-page .section p.space {
