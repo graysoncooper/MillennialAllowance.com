@@ -6,4 +6,4 @@ services:
             - 8080:80
         volumes:
             - ./nginx.dev.conf:/etc/nginx/nginx.conf
-            - ./_site:/public
+            - ./public:/public

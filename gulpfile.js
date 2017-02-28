@@ -5,9 +5,10 @@ var fs = require('fs');
 var glob = require('glob');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var pug = require('pug');
+var pug = require('gulp-pug');
+var clean = require('gulp-clean');
 
-var SITE_OUTPUT_DIR = '_site/';
+var SITE_OUTPUT_DIR = 'public/';
 
 var deleteFolderRecursive = function (path) {
   if(fs.existsSync(path)) {
@@ -41,36 +42,14 @@ var makeDirectory = function (path) {
 
 gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts']);
 
-gulp.task('pug', function (done) {
-  try {
-    fs.mkdirSync(SITE_OUTPUT_DIR);
-  } catch (e) {
-      if (e.code !== 'EEXIST') console.log(e);
-  }
+gulp.task('clean', function () {
+  gulp.src('./public').pipe(clean({ force: true }));
+});
 
-  glob(SITE_OUTPUT_DIR + '**/*', function (err, matches) {
-    for (var i in matches) {
-      var path = matches[i];
-      var stat = fs.lstatSync(path);
-      if (stat.isDirectory()) deleteFolderRecursive(path);
-    }
-
-    glob('views/**/*.pug', { ignore: ['node_modules/**/*', 'views/_*/**/*'] }, function (err, matches) {
-      if (err) return done();
-
-      for (var i in matches) {
-        var pugFilename = matches[i];
-        var htmlFilename = SITE_OUTPUT_DIR + pugFilename.replace(/^views\//, '').replace(/\.pug$/, '.html');
-        var htmlDirectory = htmlFilename.replace(/[^/]+\.html/, '');
-        var html = pug.renderFile(pugFilename);
-
-        makeDirectory(htmlDirectory);
-        fs.writeFileSync(htmlFilename, html, { flag: 'w' });
-      }
-
-      done();
-    })
-  });
+gulp.task('pug', function () {
+  gulp.src(['./views/**/*', '!./views/_*/**/*'])
+    .pipe(pug())
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('sass', function () {

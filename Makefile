@@ -17,3 +17,7 @@ build:
 
 watch:
 	gulp watch
+
+deploy:
+	ssh -A ubuntu@shaneburkhartcom 'cd ~/ShaneBurkhart.com; git pull origin master; ./prod.sh'
+
