@@ -2065,46 +2065,46 @@ ul {
   #focus-modal #payment-form {
     width: 300px; }
 
-#course {
+#article {
   padding: 65px 0px; }
-  #course h2 {
+  #article h2 {
     color: #002A3D;
     padding-top: 35px;
     font-weight: bold; }
-  #course h3 {
+  #article h3 {
     color: #002A3D;
     font-weight: bold; }
-  #course h4 {
+  #article h4 {
     color: #002A3D;
     font-weight: bold; }
-  #course h5 {
+  #article h5 {
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 18px; }
-  #course .highlight {
+  #article .highlight {
     border: 1px solid #303f45;
     border-radius: 3px;
     margin-bottom: 25px;
     -webkit-print-color-adjust: exact; }
-    #course .highlight pre {
+    #article .highlight pre {
       padding: 14px;
       margin: 0;
       overflow-x: auto; }
-  #course .next-lesson {
+  #article .next-lesson {
     text-align: center;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     padding-top: 10px; }
-  #course .content-upgrade {
+  #article .content-upgrade {
     text-align: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 35px;
     padding-top: 10px; }
-  #course .meet-the-author {
+  #article .meet-the-author {
     background-color: #f6f6f6;
     margin-bottom: 25px;
     padding: 25px;
@@ -2112,33 +2112,33 @@ ul {
     border-radius: 3px;
     white-space: nowrap;
     overflow: hidden; }
-    #course .meet-the-author > * {
+    #article .meet-the-author > * {
       vertical-align: top;
       display: inline-block;
       white-space: normal; }
-    #course .meet-the-author .graphic {
+    #article .meet-the-author .graphic {
       width: 31%;
       margin-right: 4%; }
-      #course .meet-the-author .graphic .circle {
+      #article .meet-the-author .graphic .circle {
         border: 1px solid #eaeaea;
         border-radius: 50%; }
-    #course .meet-the-author .description {
+    #article .meet-the-author .description {
       width: 65%; }
-      #course .meet-the-author .description > * {
+      #article .meet-the-author .description > * {
         margin-bottom: 10px; }
-      #course .meet-the-author .description h3 {
+      #article .meet-the-author .description h3 {
         padding: 0px; }
-      #course .meet-the-author .description p {
+      #article .meet-the-author .description p {
         font-size: 16px; }
-  #course .next-lesson-button {
+  #article .next-lesson-button {
     color: #ffffff;
     background-color: #004056;
     margin-top: 40px;
     padding: 14px;
     display: block; }
-  #course article img {
+  #article article img {
     max-width: 100%; }
-  #course #section-name {
+  #article #section-name {
     color: #c3ccd0;
     font-size: 16px;
     display: inline-block;
@@ -2149,15 +2149,15 @@ ul {
     white-space: nowrap;
     text-overflow: ellipsis;
     float: right; }
-  #course #all-courses {
+  #article #all-courses {
     color: #555555;
     display: block;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis; }
-    #course #all-courses i {
+    #article #all-courses i {
       margin-right: 7px; }
-  #course #main-nav {
+  #article #main-nav {
     display: inline-block;
     height: 22px;
     margin: 15px 0px 0px;
@@ -2165,11 +2165,11 @@ ul {
     white-space: nowrap;
     float: left; }
   @media only screen and (max-width: 750px) {
-    #course .meet-the-author * {
+    #article .meet-the-author * {
       display: block !important;
       width: 100% !important;
       margin-bottom: 25px; }
-    #course #main-nav {
+    #article #main-nav {
       width: 30%; } }
 
 #application #main-nav {

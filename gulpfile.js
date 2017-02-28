@@ -7,38 +7,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var clean = require('gulp-clean');
+var print = require('gulp-print');
 
 var SITE_OUTPUT_DIR = 'public/';
-
-var deleteFolderRecursive = function (path) {
-  if(fs.existsSync(path)) {
-    fs.readdirSync(path).forEach(function (file,index){
-      var curPath = path + "/" + file;
-
-      if(fs.lstatSync(curPath).isDirectory()) { // recurse
-        deleteFolderRecursive(curPath);
-      } else { // delete file
-        fs.unlinkSync(curPath);
-      }
-    });
-    fs.rmdirSync(path);
-  }
-};
-
-var makeDirectory = function (path) {
-  var directories = path.split('/');
-  for (var i in directories) {
-    var directory = directories[i];
-    if (!directory) continue;
-    var p = directories.slice(0, i + 1);
-
-    try {
-      fs.mkdirSync(p.join('/'));
-    } catch (e) {
-      if (e.code !== 'EEXIST') console.log(e);
-    }
-  }
-}
 
 gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts']);
 
@@ -47,7 +18,8 @@ gulp.task('clean', function () {
 });
 
 gulp.task('pug', function () {
-  gulp.src(['./views/**/*', '!./views/_*/**/*'])
+  gulp.src(['./views/**/*', '!./views/_*/**/*', '!./views/_*'])
+    .pipe(print())
     .pipe(pug())
     .pipe(gulp.dest('public'));
 });
