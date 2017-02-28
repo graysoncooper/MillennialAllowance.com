@@ -2,8 +2,6 @@ node_modules/
 npm-debug.log
 
 tmp/
-public/
-courses/_site/
 secrets.dev.env
 secrets.prod.env
 *.DS_Store
