@@ -20,7 +20,9 @@ gulp.task('clean', function () {
 gulp.task('pug', function () {
   gulp.src(['./views/**/*.pug', '!./views/_*/**/*'])
     .pipe(print())
-    .pipe(pug())
+    .pipe(pug().on('error', function (e) {
+      console.log(e.message);
+    }))
     .pipe(gulp.dest('public'));
 });
 
