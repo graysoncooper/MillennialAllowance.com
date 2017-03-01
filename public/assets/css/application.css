@@ -1879,12 +1879,9 @@ ul {
     padding: 40px 0px; }
   #landing-page .section.micro {
     padding: 20px 0px; }
-  #landing-page .section h2 {
-    margin-bottom: 10px; }
-  #landing-page .section h4 {
+  #landing-page .section h2.short, #landing-page .section h4.short {
     margin-bottom: 10px; }
   #landing-page .section p {
-    margin-bottom: 15px;
     font-size: 18px; }
     #landing-page .section p.light {
       font-weight: 300; }
@@ -1893,11 +1890,12 @@ ul {
   #landing-page .section ul {
     padding: 0px 30px 0px;
     margin: 0px;
+    margin-bottom: 25px;
     list-style: none; }
     #landing-page .section ul li {
       position: relative;
       font-size: 16px;
-      line-height: 1.4; }
+      line-height: 1.8; }
       #landing-page .section ul li:before {
         color: #3aa549;
         content: '\f00c';
@@ -1909,25 +1907,25 @@ ul {
         margin-right: 16px; }
       #landing-page .section ul li:last-child {
         margin-bottom: 0px; }
-  #landing-page .section .container > * {
+  #landing-page .section .container > *, #landing-page .section .small-container > * {
     vertical-align: top;
     display: inline-block;
     margin-right: 4%; }
-    #landing-page .section .container > *:last-child {
+    #landing-page .section .container > *:last-child, #landing-page .section .small-container > *:last-child {
       margin-right: 0px; }
-    #landing-page .section .container > * > *:last-child {
+    #landing-page .section .container > * > *:last-child, #landing-page .section .small-container > * > *:last-child {
       margin-bottom: 0px; }
-  #landing-page .section .container > .full {
+  #landing-page .section .container > .full, #landing-page .section .small-container > .full {
     width: 100%; }
-  #landing-page .section .container > .half {
+  #landing-page .section .container > .half, #landing-page .section .small-container > .half {
     width: 48%; }
-  #landing-page .section .container > .description {
+  #landing-page .section .container > .description, #landing-page .section .small-container > .description {
     width: 55%; }
-  #landing-page .section .container > .graphic {
+  #landing-page .section .container > .graphic, #landing-page .section .small-container > .graphic {
     width: 41%; }
-    #landing-page .section .container > .graphic img {
+    #landing-page .section .container > .graphic img, #landing-page .section .small-container > .graphic img {
       width: 100%; }
-    #landing-page .section .container > .graphic .rounded {
+    #landing-page .section .container > .graphic .rounded, #landing-page .section .small-container > .graphic .rounded {
       border-radius: 3px; }
   #landing-page .section .bullet-points {
     background-color: #f6f6f6;
