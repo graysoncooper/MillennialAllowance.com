@@ -1,6 +1,13 @@
 extends ./_layouts/landing-page-no-header
 include ./_mixins/landing-page
 
+block variables
+   - var title = 'Grow Your Local Business With Facebook Ads';
+   - var fbImage = 'https://s3.amazonaws.com/spark-school/tutorials/nodejs-to-heroku/coding-on-a-laptop.jpg'
+   - var fbType = 'product';
+   - var currentPath = '/grow-your-local-business-with-facebook-ads-email-series';
+   - var description = 'It is more possible than ever to become a software developer without a college degree.  Take your first step towards getting a job as a software developer.';
+
 block no_hero
 
 block content
