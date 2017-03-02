@@ -1999,7 +1999,7 @@ ul {
 @media only screen and (max-width: 850px) {
   #landing-page .hero {
     height: 400px; }
-  #landing-page .container {
+  #landing-page .small-container, #landing-page .container {
     width: 95%; }
   #landing-page .section {
     padding: 60px 0px; }
