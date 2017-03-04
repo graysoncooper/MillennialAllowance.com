@@ -8,7 +8,7 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var clean = require('gulp-clean');
 var print = require('gulp-print');
-var imagemin = require('gulp-imagemin');
+var image = require('gulp-image');
 
 var SITE_OUTPUT_DIR = 'public/';
 
@@ -45,8 +45,13 @@ gulp.task('fonts', function () {
 
 gulp.task('images', function () {
   return gulp.src(['assets/images/**/*'])
-    //.pipe(imagemin())
     .pipe(gulp.dest('public/assets/images'));
+});
+
+gulp.task('min-images', function () {
+  return gulp.src(['assets/images/**/*'])
+    .pipe(image())
+    .pipe(gulp.dest('assets/images'));
 });
 
 gulp.task('favicons', function () {
