@@ -2143,7 +2143,7 @@ ul {
     margin-top: 40px;
     padding: 14px;
     display: block; }
-  #article article img {
+  #article img, #article article img {
     max-width: 100%; }
   #article #section-name {
     color: #c3ccd0;
