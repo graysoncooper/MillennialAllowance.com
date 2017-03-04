@@ -8,6 +8,7 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var clean = require('gulp-clean');
 var print = require('gulp-print');
+var imagemin = require('gulp-imagemin');
 
 var SITE_OUTPUT_DIR = 'public/';
 
@@ -18,7 +19,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('pug', function () {
-  gulp.src(['./views/**/*.pug', '!./views/_*/**/*'])
+  return gulp.src(['./views/**/*.pug', '!./views/_*/**/*'])
     .pipe(print())
     .pipe(pug().on('error', function (e) {
       console.log(e.message);
@@ -27,28 +28,29 @@ gulp.task('pug', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./assets/css/**/*.scss')
+  return gulp.src('./assets/css/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/assets/css'));
 });
 
 gulp.task('misc', function () {
-  gulp.src(['assets/misc/**/*'])
+  return gulp.src(['assets/misc/**/*'])
     .pipe(gulp.dest('public'));
 });
 
 gulp.task('fonts', function () {
-  gulp.src(['assets/fonts/**/*'])
+  return gulp.src(['assets/fonts/**/*'])
     .pipe(gulp.dest('public/assets/fonts'));
 });
 
 gulp.task('images', function () {
-  gulp.src(['assets/images/**/*'])
+  return gulp.src(['assets/images/**/*'])
+    //.pipe(imagemin())
     .pipe(gulp.dest('public/assets/images'));
 });
 
 gulp.task('favicons', function () {
-  gulp.src(['assets/favicons/**/*'])
+  return gulp.src(['assets/favicons/**/*'])
     // Favicons are supposed to be accessible from the root.
     .pipe(gulp.dest('public'));
 });
