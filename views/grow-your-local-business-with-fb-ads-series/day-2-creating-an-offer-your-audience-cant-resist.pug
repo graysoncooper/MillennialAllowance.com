@@ -1,0 +1,175 @@
+extends ../_layouts/article
+
+block content
+    :markdown-it()
+        # Day 2: Creating An Offer Your Audience Can't Resist
+
+        Welcome to day 2 of the email series that teaches you how to use Facebook Ads to drive paying customers to your local business.
+
+        Yesterday, we talked about the process a Facebook user goes through to become a paying customer.  Today, I'm going to show you how to create an offer that your audience can't resist.
+
+        Before we drive traffic to our site with Facebook Ads, we need to create an offer to exchange for their email.  If you remember from the yesterday, our goal for our offer is not to sell to the user.  They aren't ready for that.
+
+        Instead, we want to provide value (information, discounts, etc.) in exchange for their email. So today, I'm going to show you how to create an offer and how to collect email addresses. Let's get started!
+
+    p.info
+        | This guide assumes you already have a website.  If you don't, email me at&nbsp;
+        a(href="mailto:shane@shaneburkhart.com") shane@shaneburkhart.com
+        |  and I will help you set one up.
+
+
+    :markdown-it()
+        ## What should you offer your audience?
+
+        The goal of your offer is to get people to your website and give you their contact information for free.
+
+        There are a few things to keep in mind when creating your offer:
+
+        - **It needs to be free** - the only thing your visitor should have to give you for your offer is an email.
+        - **It should be relevant to your business** - a discount or free trial is a good idea.
+        - **It needs to provide value to the user** - make sure your user really wants your offer.
+
+        A good place to find ideas for your offer is from past promotions.  If there is a promotion you ran in the past that did well, it's a good idea to offer it again since you know it works.
+
+        If you need some inspiration, here are some ideas I came up with for various businesses:
+
+        - **Yoga studio** - first week free or first month at a discount.
+        - **Power washing** - discount on first house clean.
+        - **Restaurant** - free appetizer or discount on your next meal.
+        - **Dentist** - free checkup or discount on cleaning.
+        - **Retail** - discount on your next purchase.
+
+        Once you have your offer figured out, you need to create a Mailchimp account so you can manage the emails you receive and send them messages.
+
+        ## Create a Mailchimp account
+
+        Mailchimp is a free email service provider that makes it easy to build lists of emails and send messages to them.  We'll send emails later, but for now, you just need to create a Mailchimp account and a list to store the email addresses you collect.
+
+        Visit the [Mailchimp signup page to create an account.](https://login.mailchimp.com/signup)  You'll be walked through a few steps asking for various pieces of information about your business.
+
+        Once you have an account, you need to create a list to store email addresses for your offer.  Click on the "Lists" tab in the site header and select "Create List". Call your list something like "Facebook Ads Offer".
+
+        For the "From email" and "From name", I suggest using your business email and your full name. Very few people (if anyone) will message you so don't worry about getting spammed.
+
+        ![](/assets/images/fb-ads-series/day-2/creating-a-mailchimp-list.png)
+
+        You now have a list to store email addresses. To collect the user's email, we are going to use Sumo.com.
+
+        ## Installing Sumo.com for email collection
+
+        When a user visits your site from a Facebook Ad, they need a way to give their email in exchange for our offer.  One of the easiest ways to collect emails is with Sumo.com.  They provide a small snippet of code that you install on your website which gives you access to tools for collecting emails. Go to [Sumo.com and create an account.](https://sumo.com/register)
+
+        After you create an account, you will see a code snippet that you need to install on your website.  Under the code snippet, there are instructions to install Sumo.com on various platforms. Select the one for your website and follow the instructions.
+
+        ![](/assets/images/fb-ads-series/day-2/sumo-code-snippet.png)
+
+        Once you have the code snippet installed, a little blue button will show up on the top right of your website.  Click it to log in to your account and access the Sumo Dashboard.
+
+        ![](/assets/images/fb-ads-series/day-2/sumo-blue-crown-button.png)
+
+        Sumo.com has a free tier, but we are going to be using Pro features (display rules, integrations).  You only need to upgrade to the "Small" tier which is a monthly subscription so you can cancel at any time. As an added bonus, the little blue crown doesn't show to visitors for Sumo.com Pro.
+
+        To upgrade, open the Sumo Dashboard on your site and click on the "Sumo Store" button at the top.  Select the "Small" tier and follow the payment instructions to finish your setup!
+
+        ![](/assets/images/fb-ads-series/day-2/sumo-store-button.png)
+
+        ## Adding email collection to your website
+
+        For email collection, you are going to use Sumo's Welcome Mat.  A Welcome Mat is a full page section that appears at the beginning of the page when the user visits.  You can turn the Welcome Mat on and off for certain pages so it won't be shown unless the visitor is from a Facebook Ad. More on this later.
+
+        Go to the Sumo Dashboard and select the Welcome Mat icon.  When it asks you to activate Welcome Mat, click "No, just continue to app".  You'll activate Welcome Mat after you are done creating your form.  I'll walk you through the steps to create a form for your offer.
+
+        ![](/assets/images/fb-ads-series/day-2/sumo-activate-modal.png)
+
+        ### Create a Sumo.com Welcome Mat
+
+        Sumo.com automatically creates a Welcome Mat for us called "Mat #1". Click on that tab and you will see the "Design" section where you can change the way your Welcome Mat looks.
+
+        ![](/assets/images/fb-ads-series/day-2/sumo-welcome-mat-design-tab.png)
+
+
+        Your Welcome Mat doesn't have to be anything crazy.  The design is up to you, but I suggest selecting a template and changing the title and description to match your offer. At the very least your Welcome Mat needs an email signup form.
+
+        Here's what my Welcome Mat for a Yoga studio would look like.
+
+        ![](/assets/images/fb-ads-series/day-2/yoga-studio-sumo-welcome-mat.png)
+
+
+        ### Integrate your Welcome Mat with Mailchimp
+
+        When you get your  Welcome Mat created, you need to link it to your Mailchimp account so emails get added to your list.  To do this, click on the "Campaign #1" tab and select "Integrations" on the left-hand side.  From there, select "Mailchimp" and follow the instructions.
+
+        ![](/assets/images/fb-ads-series/day-2/campaign-integration-welcome-mat-tab.png)
+
+        When you are connected to Mailchimp, use the drop down to select the Mailchimp list for your site.  Mine is "Facebook Ads Offer".  Also, check the button that is labeled "Disable Double Opt-in".  This will make it so users don't get sent a confirmation email and instead get added to your list immediately.
+
+        ![](/assets/images/fb-ads-series/day-2/mailchimp-integration-settings.png)
+
+        Click save and you are connected to Mailchimp.
+
+        ### Show your Welcome Mat on specific pages
+
+        You've created your Welcome Mat and connected it to Mailchimp, but you need to make sure it only shows to Facebook Ads visitors.  We use "Display Rules" to do this.  In the "Campaign #1" tab, click "Display Rules" on the left-hand side.
+
+        ![](/assets/images/fb-ads-series/day-2/welcome-mat-display-rules-tab.png)
+
+        Under "Show Rules", click "Add a 'Show' Rule".  For the first dropdown, select "On URLs Where A Hash...". For the second, select "Exactly Matching".  And for the third field, type #special-offer.  Click "Save" at the bottom right.  Now anytime someone visits a page with "#special-offer" appended to the URL, your Welcome Mat will show. We'll add this to our Facebook Ad URL later.
+
+        ![](/assets/images/fb-ads-series/day-2/welcome-mat-special-offer-display-rule.png)
+
+        Now that we are done creating our Welcome Mat, click the "x" at the top right to go back to the Sumo Dashboard.  Hover over the Welcome Mat icon and toggle it on to activate your Welcome Mat.
+
+    p.info
+        | If you have trouble getting things set up or want me to do everything for you, contact me at&nbsp;
+        a(href="mailto:shane@shaneburkhart.com") shane@shaneburkhart.com
+        | . I'll be more than happy to help :)
+
+    :markdown-it()
+        ## Sending them an email with their offer
+
+        Earlier you created a Mailchimp account to store emails. Now you are going to your Mailchimp account to send a "Thank you" email containing a way for them to redeem their offer.  The best part is the email is sent automatically anytime someone signs up.
+
+        Sending an automatic email after signup is a paid feature for Mailchimp.  To upgrade your Mailchimp account, visit the "Automation" tab in the site header and click the "Upgrade" button at the top of the page. Select "Monthly" and add a payment method on the right-hand side.  Follow the payment instructions and your account is upgraded.
+
+        Now go back to the "Automation" tab so we can create our "Thank you" email.  Type "welcome message" in the search bar and select the "Welcome Message" automation.  Give it a name like "Facebook Offer Thank You" and select your list.
+
+        ![](/assets/images/fb-ads-series/day-2/mailchimp-welcome-message-email-automation-template.png)
+
+        You will be taken to a page for your new automation.  By default, this automation waits a day to send the welcome email.  Instead, we want to send it immediately.  Click on the "Edit trigger" link and change the delay to "immediately".
+
+        ![](/assets/images/fb-ads-series/day-2/mailchimp-update-trigger-modal.png)
+
+        Now click on the "Design Email" button on the "Welcome" email to edit the welcome email.
+
+        ![](/assets/images/fb-ads-series/day-2/mailchimp-email-automation-view.png)
+
+        Add an email subject for your thank you email.  I'm using "Here's your 10% discount :)" for my subject line.  When you are done, click "Next" in the bottom right of the page.
+
+        ![](/assets/images/fb-ads-series/day-2/subject-line-for-welcome-email.png)
+
+        On the next page, you will be asked to select a template.  Scroll down until you find "Simple Text".  Select that and you will be taken to an editor.
+
+        Make your thank you email short and sweet.  Give them their discount they signed up for and inform them on how they can redeem it.
+
+        Here's what my final email looks like:
+
+        ![](/assets/images/fb-ads-series/day-2/final-thank-you-email.png)
+
+        Save your email and you will be redirected to your "Facebook Offer Thank You" automation.  Click the "Next" button in the bottom right to finish setting up your thank you email automation.
+
+        ## Try it out to make sure it works
+
+        It's always important to verify everything is set up correctly. To view your Welcome Mat, visit your homepage with "#special-offer" appended to the URL. Your Welcome Mat should appear at the top of the page.
+
+        Enter your email and verify you get added to your Mailchimp list. To check your Mailchimp list, click on the "Lists" button in the site header and then your list.  You should see the email you just entered in the "View contacts" section. Also, verify that you received a "Thank you" email with a way to redeem your offer.
+
+        If you need help with something or want me to set this up for you, send me an email at [shane@shaneburkhart.com](mailto:shane@shaneburkhart.com). I'll be sure to get back to you personally :)
+
+        Today, you created your offer and added a signup form to your website.  Tomorrow, you'll learn how to drive traffic to this offer with Facebook Ads.
+
+        I'll see you then!
+
+    p
+        | Best,
+        br
+        | Shane
