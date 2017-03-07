@@ -1,0 +1,266 @@
+extends ../_layouts/article
+
+block content
+    :markdown-it()
+        # Day 3: Driving Traffic To Your Offer With Facebook Ads
+
+        Welcome to day 3 of the email series that teaches you how to use Facebook Ads to drive paying customers to your local business.
+
+        Yesterday, you created an offer and set up a Sumo Welcome Mat to collect emails for that offer.  Today, I'm going to show you how to drive traffic to your offer with Facebook Ads.  After you get everything set up, you should see signups within the first few days. Let's get started.
+
+    p.info
+        | If you have trouble at any time or want me to set everything up for you, email me at &nbsp;
+        a(href="mailto:shane@shaneburkhart.com") shane@shaneburkhart.com
+        | . I will be more than happy to help :)
+
+    :markdown-it()
+        ## Create a Facebook Ads account
+
+        To show Facebook Ads, you need to create a Facebook Ads account.  If you are already on Facebook, this is pretty easy.  Visit the link below to view your Facebook Ads Manager.
+
+        [Create your Facebook Ads account.](https://www.facebook.com/ads/manager/accounts/)
+
+        Create an account or click on the appropriate account if you already have one.  After you have an account, you need to add your billing information. This link will help you if you have trouble.
+
+        [How to add a payment method to Facebook Ads.](https://www.facebook.com/business/help/132073386867900)
+
+        Once you have your billing information set up, you are ready to create your ads.  For the rest of today, I'll walk you step-by-step through how to create Facebook Ads and drive traffic to your discount offer.
+
+        ## Facebook Ads overview
+
+        Let's talk about how Facebook Ads works.
+
+        There are 3 levels to the Facebook Ads Manager:
+
+        - **Ad** - an ad contains the image, text, and link shown to a Facebook user.  This is where you decided how your ads look.
+        - **Ad Set** - ad sets contains ads and is where you set a budget and decide which Audience to show ads to.  More on audiences in just a bit.
+        - **Campaign** - campaigns are at the top level and contain ad sets.  Campaigns define your goal for the ads and how to optimize your ad dollars.
+
+        If that didn't make sense, the only thing you need to worry about right now is that campaigns are made up of ad sets which contain ads.  I'll walk you through the rest.
+
+        Earlier, I mentioned ad sets determine which audience to show ads to but didn't go over what an audience was.
+
+        Facebook Audiences define groups of people to show ads to.  There are a lot of ways to set up audiences but you are going to create an audience of people that live within a certain distance from your business. Let's do that now.
+
+        ## Defining a Facebook Ads audience
+
+        To create a Facebook Audience, click on the three bar icon in the site header on the top left of the screen and select "Audiences" from the popup.
+
+        ![](/assets/images/fb-ads-series/day-3/facebook-audience-nav.png)
+
+        Now click on the blue  "Create Audience" button and select "Saved Audience".  A popup will appear where you can give your audience a name and define who should be in your audience.
+
+        ![](/assets/images/fb-ads-series/day-3/fb-new-saved-audience-popup.png)
+
+        Fill in the box labeled "Audience Name" with a name that describes the audience.  Going with the Yoga Studio example from yesterday, I'm going to make this Audience for people in Austin Texas with an interest in Yoga.  I'll call mine "Austin TX w/ Yoga Interest".
+
+        The remaining sections are used to define the people in your audience.
+
+        We are running ads for a local business so for location, enter the address for your business and select a radius in the 10-25 mile range.
+
+        The number in the top right of the create audience popup will change when you change the location.  This number tells you how many people are in your audience. For a local business, I recommend shooting for 50k-200k audience size.  The more specific an audience, the better.
+
+        ![](/assets/images/fb-ads-series/day-3/facebook-saved-audience-for-local-austin-tx-business.png)
+
+        Right now, I am only segmenting my audience by location with a radius of 10 miles from my address.  Since my audience size is 1,000,000 people, I need to narrow it down some more.  You can narrow your audience down further by selecting interests related to your business.
+
+        In the "Detailed Targeting" section of the audience popup, enter some broad interests your audience might like.  I'm going to continue with my XYZ Yoga Studio example from earlier and narrow my audience down to people within 10 miles who are interested in Yoga.
+
+        ![](/assets/images/fb-ads-series/day-3/austin-tx-with-yoga-interest-audience-size.png)
+        ![](/assets/images/fb-ads-series/day-3/detailed-targeting-with-yoga-interest.png)
+
+        Adding the Yoga interest brought my audience to 190k so I'm going to leave it at that.  How you define your audience is going to depend largely on what your typical customer looks like.
+
+        If your typical customer is a lawyer, you can narrow your audience down to just people that have the job title of lawyer.  If your target is small businesses, try typing in "small business owners" to segment down to people that own a business.
+
+        When I segment my audience by small business owners, it looks like there are 36,000 people within 10 miles of my address that own a small business.
+
+        ![](/assets/images/fb-ads-series/day-3/austin-tx-small-business-owners-audience-size.png)
+
+        Even though this audience size doesn't fall in the 50k threshold I set earlier, it's still a very large group of people.  If you wanted to get this number to greater than 50k, you can increase the location radius to 15 or 20 miles. This should put your audience size above the 50k threshold.
+
+        When you get your audience defined, you need to do one more thing before you can show ads to your audience.
+
+        ## Adding the tracking pixel to our site
+
+        Facebook Ads does an awesome job of optimizing your ads to show to people that are more likely to convert.  This makes your ads perform better and cost you less per conversion.  For Facebook to optimize, it needs to know how users are behaving on your site.  That's where the Facebook Ads tracking pixel comes in.
+
+        A tracking pixel is simply a snippet of code you put on your website that tracks user behavior.  In the case of Facebook Ads, the pixel is used to track where users visit and if they signed up.
+
+        Depending on your site, adding your tracking pixel will vary. [Here's a guide on how to generate and add the pixel to your website.](https://www.facebook.com/business/help/952192354843755)
+
+    p.info
+        | If you have trouble at any time or want me to set everything up for you, email me at &nbsp;
+        a(href="mailto:shane@shaneburkhart.com") shane@shaneburkhart.com
+        | . I will be more than happy to help :)
+
+    :markdown-it()
+        With your pixel installed, Facebook can track how your ads perform and optimize them to save you money.  Later, I'll show you how to tell Facebook when someone signs up on your site.  For now, you just need to install your pixel.
+
+        You are now ready to show your audience ads!  Let's create your first ad.
+
+        ## Creating a Facebook Ad
+
+        With your pixel installed and audience selected, it's time to create some ads. Let's get started!
+
+        ### Campaign
+
+        Since this is your first ad, we need to start by creating a Facebook Ads Campaign.
+
+        Click on the 3 bar icon again and select "Ads Manager".  On this page, select "Create Campaign" above the table.
+
+        You will be taken to a page where you are asked what your marketing objective is.  This is where you define your goal for your ads so Facebook knows how to optimize.
+
+        There are a lot of different options, but you want to select "Conversions" since we want to optimize for signups on our website.
+
+        ![](/assets/images/fb-ads-series/day-3/fb-create-campaign-options.png)
+
+        When you scroll down, you are asked for a campaign name.  I suggest naming it around what you are offering.  I'm naming mine "Discount Offer".
+
+        ![](/assets/images/fb-ads-series/day-3/naming-your-fb-ads-campaign.png)
+
+        ### Ad set
+
+        When you click "Continue" you are taken to a page to create an ad set for the campaign.  This is where you define a budget and who to show your ads to.  Since we selected "Conversion" for our campaign type, Facebook is asking for a tracking pixel to use.
+
+        Click on the box labeled "Website" and select "Lead" for your tracking pixel.
+
+        ![](/assets/images/fb-ads-series/day-3/tracking-pixel-lead-conversion.png)
+
+        Scroll down to the "Audience" section and find the audience you created earlier in the "Use a Saved Audience" drop-down.  This will show ads to only people in that audience.
+
+        ![](/assets/images/fb-ads-series/day-3/selecting-saved-audience-when-creating-facebook-ad-set.png)
+
+
+        In the "Placements" section you determine where to show your ads on the Facebook platform.  I find that only showing ads in the user's "Facebook Feed" performs the best.
+
+        Select "Edit Placements" in the "Placements" section.  Under "Platforms", unselect everything except the box labeled "Feeds" under "Facebook".
+
+        ![](/assets/images/fb-ads-series/day-3/editing-facebook-ad-set-placements.png)
+
+        Next, you need to define your budget.  To start out, I recommend making your budget something small like $7 a day.  Once you have everything set up and know it's working, you can start increasing your ad spend.
+
+        ![](/assets/images/fb-ads-series/day-3/setting-a-small-budget-for-facebook-ad-set.png)
+
+        The only other setting you need to change is the ad set name at the bottom of the page.  Name it something related to your audience.  In my case, "Austin TX w/ Yoga Interest" is appropriate.  Click "Continue".
+
+        ![](/assets/images/fb-ads-series/day-3/naming-your-facebook-ad-set.png)
+
+        ### Ad
+
+        After creating your ad set, you will be taken to a page to create your first Facebook Ad.  We are going to use the "Single Image" format so select the "Single Image" option.
+
+        ![](/assets/images/fb-ads-series/day-3/facebook-ad-format-type.png)
+
+        In the following sections, I'll walk you through creating your first ad.
+
+        #### Images
+
+        Your Facebook Ads will be shown only in the user's feeds.  It's important to pick an eye catching image if you want to avoid getting lost in the crowd.
+
+        You only need one image per ad but it should be high quality and preferably show your service or evoke an emotion.  In general, using pictures of your product or service works great.  For instance, a yoga studio might use images from a class they hosted.  Or a restaurant might use appetizing pictures of their food.
+
+        If you don't have any pictures relating to your business, you can easily find free high-quality photos using the "Free Stock Images" button.  I find that images of people work really well.  Especially if the person is smiling or doing something related to your business.
+
+        ![](/assets/images/fb-ads-series/day-3/facebook-ad-image-section.png)
+
+        Remember, the image is just used to catch the user's eye, so it doesn't have to be perfect.  You can also test different images to see which work best.  More on this in a later day.
+
+        #### Pick a Facebook Page
+
+        The next section called "Page & Links" decides how your ad should display.  The first option asks you to pick a Facebook page to represent your business on your ad.
+
+        If you don't have a Facebook page for your business, you can quickly create one with the plus link.  When you click it, you will be shown a series of options.  Your business probably falls in "Local Business or Place" category, so click on that and fill in the form.
+
+        ![](/assets/images/fb-ads-series/day-3/create-local-facebook-business-page.png)
+
+        #### Website URL
+
+        This is the page you want to send traffic to.  This can be any page since you set up your Welcome Mat to show on any page with "#special-offer" appended to the URL. If you have a webpage that describes what your business does, this is an excellent place to send traffic.  Your homepage isn't a bad idea either.
+
+        Since I want to send people to my homepage, I'm going to enter [http://shaneburkhart.com](http://shaneburkhart.com). We'll add the hash to show the Welcome Mat in a bit.
+
+        #### Headline & Text
+
+        The headline is the big text under your image.  Your headline should quickly describe your offer.  My headline for one week free at XYZ Yog Studio would be "Get Your First Week Of Yoga Classes Free".
+
+        The next section is the ad text.  This section is used to tell the user what they get and how they get it.  For my Yoga Studio example, I want to let them know they get a week free and they need to click the link.
+
+        I went with "Want a week free of yoga classes?  Click the link to redeem your discount."
+
+        #### Call To Action
+
+        This is simply the text displayed on the button for your Ad.  Since you want people to sign up, I suggest using the "Sign up" call to action.
+
+        #### News Feed Link Description
+
+        This section doesn't get shown on all platforms but is good to have anyways.  This text is displayed under the headline and should describe what they get on your page.
+
+        For my Yoga studio, I went with "If you sign up now, you get your first week of Yoga classes at XYZ Yoga Studio absolutely free!".
+
+        #### Display Link
+
+        You probably don't need to put anything here unless you want the URL on your ad to display differently.  I'm going to leave mine blank so it uses the default URL for my site.
+
+        #### URL Parameters
+
+        This is where you add your "#special-offer" for your Welcome Mat.  I added "#special-offer" for mine. This should match what you set up in the display rules of your Sumo Welcome Mat from yesterday.
+
+        #### Final Ad
+
+        ![](/assets/images/fb-ads-series/day-3/final-yoga-ad-example.png)
+
+        That's my finished yoga studio ad.  I left the Facebook page as myself since I didn't want to create a fake business.  Your Facebook page should match your business, though.
+
+        #### Need some help?
+
+        If you are having trouble coming up with inspiration for your ad, the link below has thousands of Facebook Ads examples you can search through.
+
+        [Get inspiration from other Facebook Ad examples.](https://adespresso.com/academy/ads-examples/)
+
+        If you need help getting set up or want me to do everything for you, email me at [shane@shaneburkhart.com](mailto:shane@shaneburkhart.com). I will be more than happy to help :)
+
+        ## Adding more ads
+
+        After you finish creating your first ad, I recommend making 2 or 3 more with different images and text. Not all Facebook Ads work and it usually takes some testing to get the image and messaging right.
+
+        Luckily, creating variants is easy now that you have one ad finished.  You simply need to duplicate the ad you just created and change the image/text.
+
+        Before you make a call on if your ads are working, you need to wait 3 days to give Facebook time to optimize.  After 3 days, you can turn off the ads that aren't performing well or try new ad content.
+
+        Don't worry about optimizing right now.  I'll send you an email in a couple of days explaining how to optimize your Facebook Ads.
+
+        ## Adding conversion code
+
+        Earlier, you added your tracking pixel to every page of your website but Facebook needs a little more information to optimize effectively.
+
+        Since we optimized our campaign for Leads, we need to tell Facebook when a user signs up and becomes a Lead.  To do this, you need to add a small code snippet to your Sumo Welcome Mat.
+
+        Open the Sumo Dashboard and select Welcome Mat.  Under "Mat #1" (your offer Welcome Mat) you will see a tab called "Tracking Pixels".  In the "Conversion Pixels" section, add the following: "<script> fbq('track', 'Lead'); </script>"
+
+        ![](/assets/images/fb-ads-series/day-3/welcome-mat-tracking-pixel-for-lead-conversion.png)
+
+        Now, when someone signs up with your Welcome Mat, that code snippet will tell Facebook someone just signed up.
+
+        Save your Welcome Mat and you are all good to go.  Your ads should be running to your page and your Welcome Mat should show to those users.
+
+        As always, I recommend making sure everything is working correctly. Preview your ad from the Ads Manager and make sure your Welcome Mat shows when you click your ad link.
+
+        ## Seeing Results
+
+        You should see signups start in the next day or two.  If you don't, you should double check to make sure everything is working.  If you find that everything is working and you aren't getting anyone to sign up, email me at [shane@shaneburkhart.com](mailto:shane@shaneburkhart.com) and I'll help you fix it.
+
+        If instead of setting everything up yourself you would rather me do it for you.  Simply email me and I will be more than happy to help :)
+
+        ## Next Steps
+
+        Most businesses will see new customers by simply setting up Facebook Ads but I recommend taking it a step further.  Instead of giving a discount and hoping they come to your business, it's a good idea to guide them to a purchase.
+
+        This means discount reminders if they haven't redeemed their code, product education, and emails offering your product or service.  Adding even a small email series that gets sent to new subscribers will do wonders for driving customers to your business. Inevitably, this increases your sales!
+
+        We'll cover all of this tomorrow.  For now, sit back and watch your new traffic roll in!
+
+    p
+        | Best,
+        br
+        | Shane Burkhart
