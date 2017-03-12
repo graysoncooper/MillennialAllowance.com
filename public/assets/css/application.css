@@ -1649,12 +1649,13 @@ h1.light, h1 .light, h2.light, h2 .light, h3.light, h3 .light, h4.light, h4 .lig
 h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, h4 .normal, h5.normal, h5 .normal, h6.normal, h6 .normal, p.normal, p .normal, span.normal, span .normal, a.normal, a .normal {
   font-weight: 400 !important; }
 
-img.circle {
-  border-radius: 50%; }
-
-img.outline {
-  border: 3px solid #ffffff;
-  box-shadow: 2px 2px 25px #555555; }
+img {
+  max-width: 100%; }
+  img.circle {
+    border-radius: 50%; }
+  img.outline {
+    border: 3px solid #ffffff;
+    box-shadow: 2px 2px 25px #555555; }
 
 blockquote {
   position: relative;
@@ -1804,6 +1805,14 @@ ul {
 
 #landing-page .small-container {
   width: 700px; }
+
+#landing-page .content-upgrade {
+  width: 600px;
+  margin: 0px auto;
+  padding: 10px 0px;
+  border-radius: 3px; }
+  #landing-page .content-upgrade.light-gray {
+    background-color: #f6f6f6; }
 
 #landing-page .hero {
   position: relative;
@@ -2012,7 +2021,9 @@ ul {
   #landing-page .hero {
     height: 500px; }
     #landing-page .hero p.narrow {
-      width: 100%; } }
+      width: 100%; }
+  #landing-page .content-upgrade {
+    width: 100%; } }
 
 @media only screen and (max-width: 350px) {
   #landing-page .hero {
