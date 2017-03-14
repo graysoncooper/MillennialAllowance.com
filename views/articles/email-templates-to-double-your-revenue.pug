@@ -1,6 +1,11 @@
-extends ../_layouts/article
+extends ../_layouts/lead-magnet
+
+block no_sumo
 
 block content
+    p
+        a#site-logo(href="http://shaneburkhart.com") ShaneBurkhart.com
+
     :markdown-it()
         # 5 Email Templates You Need To Send To Your Existing Customers
 
@@ -40,9 +45,7 @@ block content
 
         As well as introducing yourself, this is also a good place to set expectations about what emails they will receive in the future as well as how frequently they receive them.  You don't want to surprise customers by sending more email than they expect.  That's a one way trip to the spam folder!
 
-        ### Template
-
-        Here's a template you can use for your business:
+    h3.page-break-before Welcome Email Template
 
     .box
         :markdown-it(html=true)
@@ -78,7 +81,7 @@ block content
         - Car dealerships can remind their customers it's time for an oil change and they can bring it in.
         - Jewelers can remind their customers that it is a good idea to clean their jewelry with you.
 
-        ### Template
+    h3.page-break-before Reminder Email Template
 
     .box
         :markdown-it(html=true)
@@ -113,7 +116,7 @@ block content
 
         Guess what?  You happen to be an expert on Yoga mats and in fact, your business sells some of the best!  Let them know why they are the best and you can bet your customer is going to thank you not only verbally but with their wallet.  Cha-ching!
 
-        ### Template
+    h3.page-break-before Discount Email Template
 
     .box
         :markdown-it(html=true)
@@ -133,11 +136,6 @@ block content
             [your name]<br>
             [your business]
 
-    p.info
-        | If you want help getting set up or just want me to set up a plan that will double your revenue, email me at&nbsp;
-        a(href='mailto:shane@shaneburkhart.com') shane@shaneburkhart.com
-        | .
-
     :markdown-it()
         ## Email 4: Run Flash Sales
 
@@ -147,7 +145,12 @@ block content
 
         This is a great way to boost sales for a month or drive customers to your business.  Usually these emails have a  short time limit to promote instant action.
 
-        ### Template
+    p.info
+        | If you want help getting set up or just want me to set up a plan that will double your revenue, email me at&nbsp;
+        a(href='mailto:shane@shaneburkhart.com') shane@shaneburkhart.com
+        | .
+
+    h3.page-break-before Flash Sale Email Template
 
     .box
         :markdown-it(html=true)
@@ -185,7 +188,7 @@ block content
 
         These emails also keep you out of the spam folder since you are providing value to your customer at no cost to them.
 
-        ### Template
+    h3.page-break-before Informational Email Template
 
     .box
         :markdown-it(html=true)
