@@ -1673,7 +1673,17 @@ ul {
   margin-top: 0px;
   margin-bottom: 25px; }
   ul li {
-    margin-bottom: 15px; }
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8; }
+
+.box {
+  background-color: #f6f6f6;
+  padding: 14px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  line-height: 1.6;
+  -webkit-print-color-adjust: exact; }
 
 #payment-form {
   margin: 0px auto; }
