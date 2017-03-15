@@ -1,0 +1,98 @@
+extends ./_layouts/landing-page-no-header
+include ./_mixins/landing-page
+
+block variables
+   - var title = 'Grow Your Local Business With Facebook Ads';
+   - var fbImage = 'https://s3.amazonaws.com/spark-school/tutorials/nodejs-to-heroku/coding-on-a-laptop.jpg'
+   - var fbType = 'product';
+   - var currentPath = '/grow-your-local-business-with-facebook-ads-email-series';
+   - var description = 'It is more possible than ever to become a software developer without a college degree.  Take your first step towards getting a job as a software developer.';
+
+block no_hero
+
+block content
+    .section.small.light-gray#signup-section
+        .container
+            .description
+                h1 5 Email Templates That Turn Existing Customers Into Repeat Customers
+
+                :markdown-it()
+                    If you aren't sending these 5 emails to your existing customers, you are leaving money on the table!
+
+                    Sign up now to get the 5 free email templates that drive existing customers back to your business and skyrocket your profit margins!
+
+
+            .graphic
+                .signup-form
+                    h3.bold Get 5 free email templates!
+                    p.light
+                        | You need to send these 5 email templates if you want to
+                        b  drive existing customers back to your business and turn them into repeat customers!
+                    ._form_9
+                    script(src="https://sparkschool.activehosted.com/f/embed.php?id=9" type="text/javascript" charset="utf-8")
+
+    .section.small
+        .small-container
+            .full
+                h2 Skyrocket Your Profit Margins!
+
+                :markdown-it()
+                    Depending on your industry, it costs between 5 to 25 times less to sell to an existing customer than it does to acquire a new one.
+
+                    **This translates to 5 to 25 times greater profit margins!**
+
+                    With those numbers, it's a no brainer you should be selling to your existing customers. But are you?
+
+                    This is a list of 5 email templates you should send to your existing customers to drive them back to your business and skyrocket your profit margins!
+
+    .section.dark-green
+        .container
+            .description
+                h2.bold Hey, I'm Shane!
+                p My name is Shane and I am a digital marketer who specializes in using technology to grow Austin businesses.
+                p I have used email marketing to grow various businesses and I will do the same for you!
+                p
+                    | It doesn't matter if you are sending email right now.  If you want to take your business to the next level,
+                    b  you need to send these 5 emails to your existing customers!
+
+            .graphic
+                img.circle.outline(src="https://s3.amazonaws.com/spark-school/me_and_yogi.png" alt="Shane Burkhart with his dog, Yogi.")
+
+    .section
+        .small-container
+            .full
+                h2 Frequently Asked Questions
+
+                p.bold Won't I be spamming my existing customers?
+
+                p It's a common misconception that all emails are spam.  That's just not the case!
+
+                p Sure, if your customer isn't interested in what you are sending, you are spamming them. But these 5 email templates are designed to provide value to your customer.
+
+                p The more value you provide, the more likely your customer will fall in love with your business and make additional purchases.  Everyone wins!
+
+
+                p.bold How long will it take to see results?
+
+                p As soon as you send your first email!
+
+                p With these templates, all you have to do is fill in a few blanks and you are ready to go. It's as easy as that!
+
+                p.bold Is this something I can set up on my own?
+
+                p
+                    | Absolutely! The easiest way to send emails is with a&nbsp;
+                    a(href='https://mailchimp.com/') MailChimp
+                    |  account.
+
+                p If you need help sending emails, sign up and send me an email. Simply say "I need help setting up MailChimp" and I'll help you get set up!
+
+                p.bold Do I need an existing list of each customer's email address?
+
+                p It would make things easier if you already had a list of email addresses, but it's not necessary. You will need to start collecting them, though.
+
+                p If you need help collecting email addresses from your customers, sign up and send me a message. Just say something like, "I need help collecting emails" and we'll get it figured out :)
+
+    .section.cta.light-gray
+        .container
+            a.button.block(href='#signup-section') Get 5 free email templates!

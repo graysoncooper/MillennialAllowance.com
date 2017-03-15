@@ -23,6 +23,7 @@ gulp.task('pug', function () {
     .pipe(print())
     .pipe(pug().on('error', function (e) {
       console.log(e.message);
+      this.emit('end');
     }))
     .pipe(gulp.dest('public'));
 });
