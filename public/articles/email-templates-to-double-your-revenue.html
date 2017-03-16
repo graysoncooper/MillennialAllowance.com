@@ -11,7 +11,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-92817795-1', 'auto');
-ga('send', 'pageview');</script></head><body id="article"><main><div class="container"><p><a id="site-logo" href="http://shaneburkhart.com">ShaneBurkhart.com</a></p><h1>5 Email Templates You Need To Send To Your Existing Customers</h1>
+ga('send', 'pageview');
+
+function startReadWait(waitInSec) {
+    var recordRead = function () {
+        ga('send', 'event', 'Page', 'read', waitInSec + ' seconds on page')
+        startReadWait(waitInSec * 2);
+    }
+
+    setTimeout(recordRead, waitInSec * 1000);
+}
+
+startReadWait(2);</script></head><body id="article"><main><div class="container"><p><a id="site-logo" href="http://shaneburkhart.com">ShaneBurkhart.com</a></p><h1>5 Email Templates You Need To Send To Your Existing Customers</h1>
 <p>Depending on your industry, it costs somewhere between 5 to 25 times more to acquire a new customer than it does to sell to an existing one according to <a href="https://hbr.org/2014/10/the-value-of-keeping-the-right-customers">Harvard Business Review.</a></p>
 <p>Since it costs less to sell to an existing customer, <strong>this translates to 5 to 25 times greater profit margins!</strong></p>
 <p>With those numbers, it a no brainer you should be selling to your existing customers. But are you?</p>

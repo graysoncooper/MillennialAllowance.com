@@ -11,7 +11,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-92817795-1', 'auto');
-ga('send', 'pageview');</script></head><body class="no-header" id="landing-page"><main><div class="section micro dark-green"><div class="container"><div class="full"><h1 class="text-center"><span style="font-weight: 400;">List of 7 Tools Small Businesses Are Using to</span><br><span style="font-size: 54px;">Double Their Customers</span></h1></div></div></div><div class="section tiny"><div class="small-container"><div class="full"><p>If you could double your business's customers, <strong>what kind of impact would that have on you and your business?</strong></p>
+ga('send', 'pageview');
+
+function startReadWait(waitInSec) {
+    var recordRead = function () {
+        ga('send', 'event', 'Page', 'read', waitInSec + ' seconds on page')
+        startReadWait(waitInSec * 2);
+    }
+
+    setTimeout(recordRead, waitInSec * 1000);
+}
+
+startReadWait(2);</script></head><body class="no-header" id="landing-page"><main><div class="section micro dark-green"><div class="container"><div class="full"><h1 class="text-center"><span style="font-weight: 400;">List of 7 Tools Small Businesses Are Using to</span><br><span style="font-size: 54px;">Double Their Customers</span></h1></div></div></div><div class="section tiny"><div class="small-container"><div class="full"><p>If you could double your business's customers, <strong>what kind of impact would that have on you and your business?</strong></p>
 <p>Would you be able to:</p>
 <ul>
 <li><strong>Work fewer late nights and weekends?</strong></li>

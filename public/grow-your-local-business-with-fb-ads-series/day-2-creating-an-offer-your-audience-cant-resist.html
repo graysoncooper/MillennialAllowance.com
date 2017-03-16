@@ -11,7 +11,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-92817795-1', 'auto');
-ga('send', 'pageview');</script></head><body id="article"><header><div class="container"><nav class="pull-left"><a id="site-logo" href="/">Shane Burkhart</a></nav></div></header><main><div class="container"><h1>Day 2: Creating An Offer Your Audience Can't Resist</h1>
+ga('send', 'pageview');
+
+function startReadWait(waitInSec) {
+    var recordRead = function () {
+        ga('send', 'event', 'Page', 'read', waitInSec + ' seconds on page')
+        startReadWait(waitInSec * 2);
+    }
+
+    setTimeout(recordRead, waitInSec * 1000);
+}
+
+startReadWait(2);</script></head><body id="article"><header><div class="container"><nav class="pull-left"><a id="site-logo" href="/">Shane Burkhart</a></nav></div></header><main><div class="container"><h1>Day 2: Creating An Offer Your Audience Can't Resist</h1>
 <p>Welcome to day 2 of the email series that teaches you how to use Facebook Ads to drive paying customers to your local business.</p>
 <p>Yesterday, we talked about the process a Facebook user goes through to become a paying customer.  Today, I'm going to show you how to create an offer that your audience can't resist.</p>
 <p>Before we drive traffic to our site with Facebook Ads, we need to create an offer to exchange for their email.  If you remember from the yesterday, our goal for our offer is not to sell to the user.  They aren't ready for that.</p>
@@ -100,7 +111,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-92817795-1', 'auto');
-ga('send', 'pageview');</script><script type="text/javascript">function getQueryVariable(variable) {
+ga('send', 'pageview');
+
+function startReadWait(waitInSec) {
+    var recordRead = function () {
+        ga('send', 'event', 'Page', 'read', waitInSec + ' seconds on page')
+        startReadWait(waitInSec * 2);
+    }
+
+    setTimeout(recordRead, waitInSec * 1000);
+}
+
+startReadWait(2);</script><script type="text/javascript">function getQueryVariable(variable) {
    var query = window.location.search.substring(1);
    var vars = query.split("&");
 
