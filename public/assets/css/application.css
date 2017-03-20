@@ -1592,6 +1592,10 @@ iframe.hidden {
   margin: 0px auto;
   width: 500px; }
 
+.tiny-container {
+  margin: 0px auto;
+  width: 300px; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
   line-height: 1.4;
@@ -1708,6 +1712,41 @@ ul {
 #paypal-form {
   text-align: center; }
 
+#annual-revenue-form {
+  text-align: center;
+  width: 300px;
+  margin: 0px auto; }
+  #annual-revenue-form label {
+    color: #f0f0f0;
+    margin-bottom: 3px; }
+  #annual-revenue-form input {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 32px;
+    border: 1px solid #cccccc;
+    border-radius: 3px; }
+  #annual-revenue-form .button {
+    padding: 20px 30px; }
+
+#landing-page #annual-revenue-results {
+  padding: 0px; }
+  #landing-page #annual-revenue-results li {
+    overflow: hidden;
+    margin-bottom: 5px; }
+    #landing-page #annual-revenue-results li:before {
+      display: none;
+      content: none; }
+    #landing-page #annual-revenue-results li p {
+      margin-bottom: 0px; }
+    #landing-page #annual-revenue-results li .amount {
+      float: right;
+      display: inline-block;
+      width: 115px;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 15px; }
+
 .input-group {
   margin-bottom: 10px; }
   .input-group * {
@@ -1754,6 +1793,11 @@ ul {
     text-shadow: 0px 0px 2px #888888; }
     .button.bright-yellow:hover, button.bright-yellow:hover {
       background-color: #aca111; }
+  .button.orange, button.orange {
+    background-color: #F7AA30;
+    text-shadow: 0px 0px 2px #888888; }
+    .button.orange:hover, button.orange:hover {
+      background-color: #E59E2D; }
   .button.pink, button.pink {
     background-color: #f33660; }
     .button.pink:hover, button.pink:hover {
@@ -1778,8 +1822,12 @@ ul {
   visibility: hidden; }
 
 @media only screen and (max-width: 750px) {
-  .small-container, .container {
+  .tiny-container, .small-container, .container {
     width: 95%; } }
+
+@media only screen and (max-width: 330px) {
+  #annual-revenue-form {
+    width: 100%; } }
 
 #landing-page #main-nav {
   float: right; }
@@ -1827,6 +1875,9 @@ ul {
 
 #landing-page .small-container {
   width: 700px; }
+
+#landing-page .tiny-container {
+  width: 500px; }
 
 #landing-page .content-upgrade {
   width: 500px;
@@ -1938,25 +1989,25 @@ ul {
         margin-right: 16px; }
       #landing-page .section ul li:last-child {
         margin-bottom: 0px; }
-  #landing-page .section .container > *, #landing-page .section .small-container > * {
+  #landing-page .section .container > *, #landing-page .section .small-container > *, #landing-page .section .tiny-container > * {
     vertical-align: top;
     display: inline-block;
     margin-right: 4%; }
-    #landing-page .section .container > *:last-child, #landing-page .section .small-container > *:last-child {
+    #landing-page .section .container > *:last-child, #landing-page .section .small-container > *:last-child, #landing-page .section .tiny-container > *:last-child {
       margin-right: 0px; }
-    #landing-page .section .container > * > *:last-child, #landing-page .section .small-container > * > *:last-child {
+    #landing-page .section .container > * > *:last-child, #landing-page .section .small-container > * > *:last-child, #landing-page .section .tiny-container > * > *:last-child {
       margin-bottom: 0px; }
-  #landing-page .section .container > .full, #landing-page .section .small-container > .full {
+  #landing-page .section .container > .full, #landing-page .section .small-container > .full, #landing-page .section .tiny-container > .full {
     width: 100%; }
-  #landing-page .section .container > .half, #landing-page .section .small-container > .half {
+  #landing-page .section .container > .half, #landing-page .section .small-container > .half, #landing-page .section .tiny-container > .half {
     width: 48%; }
-  #landing-page .section .container > .description, #landing-page .section .small-container > .description {
+  #landing-page .section .container > .description, #landing-page .section .small-container > .description, #landing-page .section .tiny-container > .description {
     width: 55%; }
-  #landing-page .section .container > .graphic, #landing-page .section .small-container > .graphic {
+  #landing-page .section .container > .graphic, #landing-page .section .small-container > .graphic, #landing-page .section .tiny-container > .graphic {
     width: 41%; }
-    #landing-page .section .container > .graphic img, #landing-page .section .small-container > .graphic img {
+    #landing-page .section .container > .graphic img, #landing-page .section .small-container > .graphic img, #landing-page .section .tiny-container > .graphic img {
       width: 100%; }
-    #landing-page .section .container > .graphic .rounded, #landing-page .section .small-container > .graphic .rounded {
+    #landing-page .section .container > .graphic .rounded, #landing-page .section .small-container > .graphic .rounded, #landing-page .section .tiny-container > .graphic .rounded {
       border-radius: 3px; }
   #landing-page .section .bullet-points {
     background-color: #f6f6f6;
@@ -2030,7 +2081,7 @@ ul {
 @media only screen and (max-width: 850px) {
   #landing-page .hero {
     height: 400px; }
-  #landing-page .small-container, #landing-page .container {
+  #landing-page .tiny-container, #landing-page .small-container, #landing-page .container {
     width: 95%; }
   #landing-page .section {
     padding: 60px 0px; }

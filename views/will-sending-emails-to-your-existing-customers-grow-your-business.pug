@@ -1,0 +1,196 @@
+extends ./_layouts/landing-page-no-header
+include ./_mixins/landing-page
+
+block variables
+   - var title = 'Grow Your Local Business With Facebook Ads';
+   - var fbImage = 'https://s3.amazonaws.com/spark-school/tutorials/nodejs-to-heroku/coding-on-a-laptop.jpg'
+   - var fbType = 'product';
+   - var currentPath = '/grow-your-local-business-with-facebook-ads-email-series';
+   - var description = 'It is more possible than ever to become a software developer without a college degree.  Take your first step towards getting a job as a software developer.';
+
+block no_hero
+
+block content
+    .section.small.dark-green
+        .small-container
+            .full
+                h1.text-center Will sending emails to your existing customers grow your business?
+        .tiny-container
+            .full
+                p
+                p.text-center Enter your estimated annual revenue to find out if email marketing will work for your business.
+
+        .tiny-container
+            .full
+                p
+                form#annual-revenue-form()
+                    .input-group
+                        label Estimated Annual Revenue
+                        input(type='text' placeholder='$100,000')
+                    button.block.orange Will Email Grow Your Business?
+
+    .section.small#bad-results(style="display: none;")
+        .small-container
+            .full
+                h2.bold It doesn't look like sending emails will help :(
+                p With your business's revenue, it doesn't look like sending emails to your existing customers is going to help grow your business.
+
+    .section.small#results(style="display: none;")
+        .small-container
+            .full
+                h2.bold Here Are Your Results
+
+                p
+                    | Cha-ching! It looks like email marketing will
+                    b
+                        |  increase your business's revenue by&nbsp;
+                        span.extra-annual-revenue $80,000
+                        |  every year!
+
+                ul#annual-revenue-results
+                    li
+                        p.bold Revenue (Estimates)
+                    li
+                        p.amount.bold.current-annual-revenue $100,000
+                        p Current Annual Revenue Without Email
+                    li
+                        p.amount %5.0
+                        p Customers/Month Who Purchase Again From Email
+                    li
+                        p.amount.bold.new-annual-revenue $180,000
+                        p Potential Annual Revenue With Email
+
+                    br
+                    li
+                        p.bold Costs (Annual)
+                    li
+                        p.amount $120
+                        p Cost of Email Service Provider (Mailchimp)
+
+                    br
+                    li
+                        p.bold Revenue Growth (Annual)
+                    li
+                        p.amount.bold %180
+                        p Annual Revenue Growth With Email
+
+                br
+
+                h2.bold How these results are calculated
+
+                p The goal of sending emails to your existing customers is to get them back to your business and make another purchase.
+                p Email marketing is perfect for this since you can easily stay in contact and build trust with your customers.
+                p
+                    | The number in the
+                    b  "Customers/Month Who Purchase Again From Email"
+                    |  section is the percent of existing customers that will purchase again from you each month with email.
+                p On average, this number will be around %5-10 but we are being conservative with %5.
+                p
+                    | When you compound %5 revenue growth per month with your current estimated annual revenue, you get&nbsp;
+                    span.new-annual-revenue $180,000
+                    |  total annual revenue.
+
+                p
+                    | That means, when you send emails to your existing customers,
+                    b
+                        |  your business will make an extra&nbsp;
+                        span.extra-annual-revenue $80,000
+                        |  in revenue a year!
+                    |  At a cost of only $120 a year!
+
+                br
+
+                h2.bold Start sending emails to your customers
+
+                p
+                    | You can add an extra&nbsp;
+                    span.extra-annual-revenue $80,000
+                    |  in annual revenue by simply sending a few emails to your existing customers.
+                p
+                    | If that's something you are interested in, I have 5 free email templates that will help you get
+                    b  set up in less than an hour.
+                p Enter your email below to get the 5 emails that drive existing customers back to your business and turn them into repeat customers.
+
+                .content-upgrade.signup-form
+                    h3.bold Get 5 free email templates
+                    p
+                        | Enter your email to get the 5 email templates that will
+                        b
+                            |  add an extra&nbsp;
+                            span.extra-annual-revenue $80,000
+                            |  to your annual revenue!
+                    ._form_9
+                    script(src="https://sparkschool.activehosted.com/f/embed.php?id=9" type="text/javascript" charset="utf-8")
+
+        script.
+            var badResultsSection = document.getElementById('bad-results');
+            var resultsSection = document.getElementById('results');
+            var annualRevenueForm = document.getElementById('annual-revenue-form');
+            var revenueInput = annualRevenueForm.getElementsByTagName('input')[0];
+            var revenueButton = annualRevenueForm.getElementsByTagName('button')[0];
+            var currentAnnualRevenueFields = document.getElementsByClassName('current-annual-revenue');
+            var extraAnnualRevenueFields = document.getElementsByClassName('extra-annual-revenue');
+            var newAnnualRevenueFields = document.getElementsByClassName('new-annual-revenue');
+
+            function formatDollars(amount) {
+                var inputVal = amount + '';
+
+                // remove non number
+                inputVal = inputVal.replace(/[^0-9]+/g, '');
+                // remove leading 0s
+                inputVal = inputVal.replace(/^[0]+/g, '');
+
+                var len = inputVal.length;
+                var tmp = inputVal.substring(len - 3, len);
+                for (var i = 1; i * 3 < len; i++) {
+                    tmp = inputVal.substring(len - (i + 1) * 3, len - i * 3) + ',' + tmp;
+                }
+
+                inputVal = '$' + tmp;
+
+                return inputVal;
+            }
+
+            annualRevenueForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var ANNUAL_REV_GROWTH = 1.8;
+                var MAILCHIMP_PRICE = 120;
+                var annualRev = revenueInput.value;
+                annualRev = annualRev.replace(/[^0-9]+/g, '');
+                annualRev = annualRev.replace(/^[0]+/g, '');
+                annualRev = parseInt(annualRev, 10);
+
+                if (!annualRev) return;
+
+                var newAnnualRev = Math.round(annualRev * ANNUAL_REV_GROWTH) - MAILCHIMP_PRICE;
+                var extraAnnualRev = newAnnualRev - annualRev;
+
+                console.log(extraAnnualRev);
+                if (extraAnnualRev > 0) {
+                    badResultsSection.style.display = 'none';
+
+                    for (var i = 0; i < currentAnnualRevenueFields.length; i++) {
+                        currentAnnualRevenueFields[i].innerHTML = formatDollars(annualRev);
+                    }
+
+                    for (var i = 0; i < newAnnualRevenueFields.length; i++) {
+                        newAnnualRevenueFields[i].innerHTML = formatDollars(newAnnualRev);
+                    }
+
+                    for (var i = 0; i < extraAnnualRevenueFields.length; i++) {
+                        extraAnnualRevenueFields[i].innerHTML = formatDollars(extraAnnualRev);
+                    }
+
+                    resultsSection.style.display = 'block';
+                } else {
+                    resultsSection.style.display = 'none';
+                    badResultsSection.style.display = 'block';
+                }
+
+            }, false);
+
+            revenueInput.addEventListener('input', function (e) {
+                var inputVal = formatDollars(e.currentTarget.value);
+                e.currentTarget.value = inputVal;
+            }, false);

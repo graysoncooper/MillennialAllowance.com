@@ -78,6 +78,11 @@ iframe.hidden {
     width: 500px;
 }
 
+.tiny-container {
+    margin: 0px auto;
+    width: 300px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato";
@@ -245,6 +250,57 @@ ul {
     text-align: center;
 }
 
+#annual-revenue-form {
+    text-align: center;
+    width: 300px;
+    margin: 0px auto;
+
+    label {
+        color: #f0f0f0;
+        margin-bottom: 3px;
+    }
+
+    input {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 10px;
+        font-size: 32px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+    }
+
+    .button {
+        padding: 20px 30px;
+    }
+}
+
+#landing-page #annual-revenue-results {
+    padding: 0px;
+
+    li {
+        overflow: hidden;
+        margin-bottom: 5px;
+
+        &:before {
+            display: none;
+            content: none;
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        .amount {
+            float: right;
+            display: inline-block;
+            width: 115px;
+            font-size: 20px;
+            text-align: left;
+            padding-left: 15px;
+        }
+    }
+}
+
 .input-group {
     margin-bottom: 10px;
 
@@ -313,6 +369,16 @@ ul {
         }
     }
 
+    &.orange {
+        background-color: #F7AA30;
+        text-shadow: 0px 0px 2px #888888;
+
+        &:hover {
+            background-color: #E59E2D;
+        }
+    }
+
+
     &.pink {
         background-color: #f33660;
 
@@ -349,7 +415,13 @@ ul {
 
 @media only screen and (max-width : 750px) {
 
-  .small-container, .container{
+  .tiny-container, .small-container, .container{
     width: 95%;
   }
+}
+
+@media only screen and (max-width : 330px) {
+    #annual-revenue-form {
+        width: 100%;
+    }
 }
