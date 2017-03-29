@@ -1,1 +1,1 @@
-ssh -A prod 'cd ~/MillenialAllowance.com; git pull origin master; ./prod.sh'
+ssh -A prod 'cd ~/MillennialAllowance.com; git pull origin master; ./prod.sh'
