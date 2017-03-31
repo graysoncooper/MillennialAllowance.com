@@ -1534,7 +1534,7 @@ body, html {
   color: #292929;
   background-color: #ffffff;
   margin: 0;
-  font-family: "Roboto"; }
+  font-family: "Merriweather"; }
 
 body {
   min-height: 100%;
@@ -1570,7 +1570,7 @@ iframe.hidden {
   display: block;
   margin-top: 13px;
   font-size: 20px;
-  font-family: 'Lato';
+  font-family: 'Raleway';
   font-weight: 700; }
   #site-logo:hover {
     color: #0295ca; }
@@ -1597,7 +1597,7 @@ iframe.hidden {
   width: 300px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato";
+  font-family: "Raleway";
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 25px;
@@ -1939,6 +1939,8 @@ ul {
     background-color: #f6f6f6; }
     #landing-page .section.light-gray .bullet-points {
       background-color: #ffffff; }
+  #landing-page .section.marine {
+    background-color: #57bc90; }
   #landing-page .section.dark-green {
     color: #e8e8e8;
     background-color: #3fa648; }
